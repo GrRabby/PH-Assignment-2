@@ -31,13 +31,16 @@
         </nav>
     </header>
     <main>
-        <section class="relative flex flex-col justify-start items-start ">
+        <section class="relative flex flex-col justify-center items-center">
             <picture class="w-full">
                 <source srcset="./assets/bg-responsive.png" media="(max-width: 576px)">
-                <img src="./assets/hero-bg.png" class="w-full">
+                <img src="./assets/hero-bg.png" class="w-full h-full object-cover" alt="hero background image">
             </picture>
-            <div id="hero-content" class="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[92%] min-[577px]:-translate-y-[75%] w-[46%] min-[577px]:w-[22%]">
-                <img src="./assets/hero-circle.png" class="w-full" />
+            <div id="hero-content" class="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[92%] min-[577px]:-translate-y-[75%] w-[46%] min-[577px]:w-[30%] flex items-center justify-center gap-0">
+                <div class="relative flex items-center justify-center">
+                    <img src="./assets/hero-circle.png"/>
+                    <div src="./assets/new.png" alt="a new badge" class="absolute flex items-center justify-center max-h-[38px] max-w-[75px] bg-[#00FF88] border border-[#00FF88] rounded-[1000px] pt-2 pb-2 pr-4 pl-4 font-semibold text-[18px] font-[#1A0B2E] shadow-[0px_3px_27px_0px_rgba(0,255,136,0.5)] top-0 right-0 min-[993px]:right-10 min-[577px]:right-1 uppercase">New</div>
+                </div>
             </div>
         </section>
     </main>
