@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-[inter] max-w-[1600px] mr-auto ml-auto mt-0 mb-0 box-border">
+    <header>
+        <nav class="flex items-center justify-between pt-[30px] pb-[30px] pl-[200px] pr-[200px] bg-[#1A0B2E] max-h-[92px]  border border-solid border-[#412567]">
+            <img src="./assets/TechWave.png" alt="">
+            <ul class="flex gap-8 text-[#FFFFFF] text-[16px] font-medium"> 
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Episodes</a>
+                </li>
+                <li>
+                    <a href="">Host</a>
+                </li>
+            </ul>
+            <button class="bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] text-[white] flex items-center gap-1 pb-3 pt-3 pl-4 pr-4 text-[16px] font-semibold rounded-[1000px] h-11 w-[135px]">Subscribe<i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+        </nav>
+    </header>
+    <main>
+        <section class="relative flex flex-col justify-start items-start">
+            <picture class="w-full">
+                <source srcset="./assets/bg-responsive.png" media="(max-width: 576px)">
+                <img src="./assets/hero-bg.png" class="w-full">
+            </picture>
+            <div id="hero-content" class="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[92%] min-[577px]:-translate-y-[75%] w-[46%] min-[577px]:w-[22%]">
+                <img src="./assets/hero-circle.png" class="w-full" />
+            </div>
+        </section>
+    </main>
+</body>
+</html>
