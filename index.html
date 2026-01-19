@@ -13,9 +13,9 @@
 </head>
 <body class="font-[inter] max-w-[1600px] mr-auto ml-auto mt-0 mb-0 box-border">
     <header>
-        <nav class="flex items-center justify-between pt-[30px] pb-[30px] pl-[200px] pr-[200px] bg-[#1A0B2E] max-h-[92px]  border border-solid border-[#412567]">
-            <img src="./assets/TechWave.png" alt="">
-            <ul class="flex gap-8 text-[#FFFFFF] text-[16px] font-medium"> 
+        <nav class="flex items-center justify-between p-5 bg-[#1A0B2E] max-h-[92px] gap-2 border border-solid border-[#412567] min-[577px]:pt-[30px] min-[577px]:pb-[30px] min-[577px]:pl-5 min-[577px]:pr-5 min-[993px]:pl-[200px] min-[993px]:pr-[200px] min-[993px]:gap-3">
+            <img src="./assets/TechWave.png" alt="" class="min-[993px]:translate-x-[-40%]">
+            <ul class="gap-8 text-[#FFFFFF] text-[16px] font-medium hidden min-[577px]:flex min-[993px]:translate-x-[-50px]"> 
                 <li>
                     <a href="">About</a>
                 </li>
@@ -26,7 +26,8 @@
                     <a href="">Host</a>
                 </li>
             </ul>
-            <button class="bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] text-[white] flex items-center gap-1 pb-3 pt-3 pl-4 pr-4 text-[16px] font-semibold rounded-[1000px] h-11 w-[135px]">Subscribe<i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+            <button class="bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] text-[white] items-center gap-1 pb-3 pt-3 pl-4 pr-4 text-[16px] font-semibold rounded-[1000px] h-11 w-[135px] hidden min-[993px]:flex">Subscribe<i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+            <img src="./assets/hamburger-menu.png" alt="" class="block min-[577px]:hidden w-6 h-6">
         </nav>
     </header>
     <main>
