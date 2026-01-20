@@ -3,13 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TechWave</title>
     <link rel="stylesheet" href="./styles/stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-16px)' },
+            },
+            glow: {
+              '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
+              '50%': { opacity: '0.9', transform: 'scale(1.1)' },
+            },
+          },
+          animation: {
+            float: 'float 3s ease-in-out infinite',
+            glow: 'glow 3.5s ease-in-out infinite',
+          },
+        },
+      },
+    }
+  </script>
+    
 </head>
 <body class="font-[inter] max-w-[1600px] mr-auto ml-auto mt-0 mb-0 box-border">
     <header>
@@ -27,7 +51,7 @@
                 </li>
             </ul>
             <button class="bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] text-[white] items-center gap-1 pb-3 pt-3 pl-4 pr-4 text-[16px] font-semibold rounded-[1000px] h-11 w-[135px] hidden min-[993px]:flex">Subscribe<i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
-            <img src="./assets/hamburger-menu.png" alt="" class="block min-[577px]:hidden w-[18px] h-[14px]">
+            <img src="./assets/hamburger-menu.png" alt="" class="block min-[577px]:hidden w-[18px] h-3.5">
         </nav>
     </header>
     <main>
@@ -36,12 +60,12 @@
                 <source srcset="./assets/bg-responsive.png" media="(max-width: 576px)">
                 <img src="./assets/hero-bg.png" class="w-full h-full object-cover" alt="hero background image">
             </picture>
-            <div id="hero-content" class="absolute top-[10%] min-[577px]:top-[6%] min-[1180px]:top-[10%] min-[1500px]:top-[14%] left-1/2 -translate-x-[50%] 
+            <div id="hero-content" class="absolute top-[10%] min-[577px]:top-[6%] min-[1180px]:top-[10%] min-[1500px]:top-[14%] 
                 w-[46%] min-[577px]:w-[35%] 
                 flex flex-col items-center justify-center gap-10">
             <div class="relative flex items-center justify-center">
                 <img src="./assets/hero-circle.png" alt="background circle"/>
-                <img src="./assets/microphone.png" alt="microphone" class="absolute max-h-[175px] max-w-[116px] w-[30%] h-auto">
+                <img src="./assets/microphone.png" alt="microphone" class="absolute max-h-[175px] max-w-[116px] w-[30%] h-auto animate-float"/>
                 <div src="./assets/new.png" alt="a new badge" class="absolute flex items-center justify-center max-h-[38px] max-w-[75px] bg-[#00FF88] border border-[#00FF88] rounded-[1000px] pt-2 pb-2 pr-4 pl-4 font-semibold text-[18px] font-[#1A0B2E] shadow-[0px_3px_27px_0px_rgba(0,255,136,0.5)] top-0 right-[5%] min-[993px]:right-[9%] min-[577px]:-right-[1%] min-[800px]:right-[7%] uppercase">New</div>
             </div>
             <div class="flex flex-col gap-2 w-[400px] min-[577px]:w-auto mb-[101px]">
@@ -53,7 +77,7 @@
                                 flex items-center gap-2 
                                 px-5 py-3 
                                 text-[16px] font-semibold
-                                rounded-[1000px] h-11 w-[201px] ">
+                                rounded-[1000px] h-11 w-[201px]">
                     <img src="./assets/spotify.png" alt="Logo">
                     Listen on Spotify
                     </button>
