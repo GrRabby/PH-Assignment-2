@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="font-[inter] max-w-[1600px] mr-auto ml-auto mt-0 mb-0 box-border bg-[#0A0523]">
+<body class="font-[inter] max-w-[1600px] mr-auto ml-auto mt-0 mb-0 box-border">
     <header>
         <nav class="flex items-center justify-between p-5 bg-[#1A0B2E] max-h-[92px] gap-2 border border-solid border-[#412567] min-[577px]:pt-[30px] min-[577px]:pb-[30px] min-[577px]:pl-5 min-[577px]:pr-5 min-[993px]:pl-[200px] min-[993px]:pr-[200px] min-[993px]:gap-3">
             <img src="./assets/TechWave.png" alt="" class="min-[993px]:translate-x-[-40%]">
@@ -31,24 +31,75 @@
         </nav>
     </header>
     <main>
-        <section class="relative flex flex-col justify-center items-center">
+        <section class="relative flex flex-col justify-center items-center bg-[#37df21]">
             <picture class="w-full">
                 <source srcset="./assets/bg-responsive.png" media="(max-width: 576px)">
                 <img src="./assets/hero-bg.png" class="w-full h-full object-cover" alt="hero background image">
             </picture>
-            <div id="hero-content" class="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[92%] min-[577px]:-translate-y-[75%] w-[46%] min-[577px]:w-[30%] flex flex-col items-center justify-center gap-10">
+                <div id="hero-content" class="absolute top-[10%] min-[577px]:top-[6%] min-[1180px]:top-[10%] min-[1500px]:top-[14%] left-1/2 -translate-x-[50%] 
+                    w-[46%] min-[577px]:w-[35%] 
+                    flex flex-col items-center justify-center gap-10">
                 <div class="relative flex items-center justify-center">
-                    <img src="./assets/hero-circle.png"/>
-                    <img src="./assets/microphone.png" alt="" class="absolute max-h-[175px] max-w-[116px] w-[30%] h-auto">
-                    <div src="./assets/new.png" alt="a new badge" class="absolute flex items-center justify-center max-h-[38px] max-w-[75px] bg-[#00FF88] border border-[#00FF88] rounded-[1000px] pt-2 pb-2 pr-4 pl-4 font-semibold text-[18px] font-[#1A0B2E] shadow-[0px_3px_27px_0px_rgba(0,255,136,0.5)] top-0 right-[5%] min-[993px]:right-[9%] min-[577px]:-right-[4%] min-[800px]:right-[7%] uppercase">New</div>
+                    <img src="./assets/hero-circle.png" alt="background circle"/>
+                    <img src="./assets/microphone.png" alt="microphone" class="absolute max-h-[175px] max-w-[116px] w-[30%] h-auto">
+                    <div src="./assets/new.png" alt="a new badge" class="absolute flex items-center justify-center max-h-[38px] max-w-[75px] bg-[#00FF88] border border-[#00FF88] rounded-[1000px] pt-2 pb-2 pr-4 pl-4 font-semibold text-[18px] font-[#1A0B2E] shadow-[0px_3px_27px_0px_rgba(0,255,136,0.5)] top-0 right-[5%] min-[993px]:right-[9%] min-[577px]:-right-[1%] min-[800px]:right-[7%] uppercase">New</div>
                 </div>
-                <div class="flex flex-col gap-2">
-                    <h1 class="text-center text-[#FFFFFF] font-extrabold text-[40px] min-[577px]:text-[60px]">TechWave</h1>
+                <div class="flex flex-col gap-2 w-[400px] min-[577px]:w-auto mb-[101px]">
+                    <h1 class="text-center text-[#FFFFFF] font-extrabold text-[40px] min-[577px]:text-[60px] leading-none">TechWave</h1>
                     <p class="text-center text-[#FFFFFF] font-normal text-[16px]">Your daily dose of tech insights, productivity hacks, and personal growth</p>
-                    <div class="flex gap-2 justify-center"> 
-                        <button class="bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] text-[white] items-center gap-1 pb-3 pt-3 pl-4 pr-4 text-[16px] font-semibold rounded-[1000px] h-11 w-[135px] flex">Subscribe<i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
-                        <button class="bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] text-[white] items-center gap-1 pb-3 pt-3 pl-4 pr-4 text-[16px] font-semibold rounded-[1000px] h-11 w-[135px] flex">Subscribe<i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+                    <div class="flex gap-2 justify-center mt-4"> 
+                        <button class="bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)]
+                                    text-white
+                                    flex items-center gap-2 
+                                    px-5 py-3 
+                                    text-[16px] font-semibold
+                                    rounded-[1000px] h-11 w-[201px] ">
+                        <img src="./assets/spotify.png" alt="Logo">
+                        Listen on Spotify
+                        </button>
+                        <button class="
+                                    bg-transparent
+                                    flex items-center gap-2 
+                                    px-5 py-3 
+                                    text-[16px] font-semibold 
+                                    border border-solid border-[#00FF88]
+                                    rounded-[1000px] h-11 w-[147px] text-[#00FF88]">
+                        <img src="./assets/message.png" alt="Logo">
+                        Subscribe
+                        </button>
+                        </div>
                     </div>
+                </div>
+        </section>
+        <section class="bg-[#1A0B2E] px-5 py-10 min-[577px]:pt-[220px] min-[993px]:pt-[150px] min-[993px]:pb-[120px] min-[993px]:pl-[200px] min-[993px]:pr-[200px] flex flex-col items-center justify-center gap-20 text-center">
+            <div class="flex flex-col justify-center gap-4 w-full max-w-[1200px]">
+                <h2 class="text-[#FFFFFF] font-bold text-[32px] min-[577px]:text-[48px] leading-none">About the Podcast</h2>
+                <p class="text-[#FFFFFF] font-[16px] leading-5">
+                    TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.
+                    <br> We break down complex topics into digestible insights, explore productivity strategies that actually work,
+                    <br>and share stories of personal growth from industry leaders.
+                    <br>
+                    <br>
+                    Join thousands of young professionals and tech enthusiasts who start their day with TechWave.
+                </p>
+            </div>
+            <hr class="min-h-px bg-[#412567] border-0 w-full max-w-[1200px]">
+            <div class="grid gap-10 grid-cols-2 min-[577px]:gap-20 min-[577px]:grid-cols-3 min-[993px]:grid-cols-4 min-[577px]:grid-row-1 max-w-[1200px]">
+                <div class="flex flex-col items-center justify-center gap-4">
+                    <h3 class="text-[#00FF88] font-black text-[48px] w-auto">150K+</h3>
+                    <p class="text-[#FFFFFF] font-normal text-[16px] text-center w-full leading-5 text-nowrap">Monthly Listeners</p>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-4">
+                    <h3 class="text-[#00FF88] font-black text-[48px]">200+</h3>
+                    <p class="text-[#FFFFFF] font-normal text-[16px] text-center w-auto text-nowrap">Episodes Published</p>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-4">
+                    <h3 class="text-[#00FF88] font-black text-[48px]">4.9★</h3>
+                    <p class="text-[#FFFFFF] font-normal text-[16px] text-center w-auto text-nowrap">Average Rating</p>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-4">
+                    <h3 class="text-[#00FF88] font-black text-[48px]">50+</h3>
+                    <p class="text-[#FFFFFF] font-normal text-[16px] text-center w-auto text-nowrap">Industry Experts</p>
                 </div>
             </div>
         </section>
