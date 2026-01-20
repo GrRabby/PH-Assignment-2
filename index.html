@@ -18,16 +18,19 @@
           keyframes: {
             float: {
               '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-16px)' },
+              '50%': { transform: 'translateY(-10px)' },
             },
-            glow: {
-              '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
-              '50%': { opacity: '0.9', transform: 'scale(1.1)' },
+            wave: {
+                '0%':   { transform: 'translateY(0)' , opacity: '0.5' },
+                '25%':  { transform: 'translateY(15px)' ,  opacity: '1.0' },
+                '50%':  { transform: 'translateY(0)' ,  opacity: '0.5' },
+                '75%':  { transform: 'translateY(15px)' , opacity: '1.0' },
+                '100%': { transform: 'translateY(0)' , opacity: '0.5'},
             },
           },
           animation: {
             float: 'float 3s ease-in-out infinite',
-            glow: 'glow 3.5s ease-in-out infinite',
+            wave: 'wave 7s ease-in-out infinite',
           },
         },
       },
@@ -37,26 +40,26 @@
 </head>
 <body class="font-[inter] max-w-[1600px] mr-auto ml-auto mt-0 mb-0 box-border">
     <header>
-        <nav class="flex items-center justify-between p-5 bg-[#1A0B2E] max-h-[92px] gap-2 border border-solid border-[#412567] min-[577px]:pt-[30px] min-[577px]:pb-[30px] min-[577px]:pl-5 min-[577px]:pr-5 min-[993px]:pl-[200px] min-[993px]:pr-[200px] min-[993px]:gap-3">
-            <img src="./assets/TechWave.png" alt="" class="min-[993px]:translate-x-[-40%]">
-            <ul class="gap-8 text-[#FFFFFF] text-[16px] font-medium hidden min-[577px]:flex min-[993px]:translate-x-[-50px]"> 
+        <nav class="flex items-center justify-between p-5 bg-[#1A0B2E] max-h-[92px] gap-2 border border-solid border-[#412567] min-[577px]:pt-[30px] min-[577px]:pb-[30px] min-[577px]:pl-5 min-[577px]:pr-5 min-[993px]:pl-[200px] min-[993px]:pr-[200px] min-[993px]:gap-2">
+            <img src="./assets/TechWave.png" alt="" class="min-[993px]:translate-x-[-13%]">
+            <ul class="gap-8 text-[#FFFFFF] text-[16px] font-medium hidden min-[577px]:flex min-[993px]:translate-x-[-25px]"> 
                 <li>
-                    <a href="">About</a>
+                    <a href="" class="hover:rounded-3xl hover:px-3.5 hover:py-2 hover:bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] transition-all duration-200 ease-in-out">About</a>
                 </li>
                 <li>
-                    <a href="">Episodes</a>
+                    <a href="" class="hover:rounded-3xl hover:px-3.5 hover:py-2 hover:bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] transition-all duration-200 ease-in-out">Episodes</a>
                 </li>
                 <li>
-                    <a href="">Host</a>
+                    <a href="" class="hover:rounded-3xl hover:px-3.5 hover:py-2 hover:bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] transition-all duration-200 ease-in-out">Host</a>
                 </li>
             </ul>
-            <button class="bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] text-[white] items-center gap-1 pb-3 pt-3 pl-4 pr-4 text-[16px] font-semibold rounded-[1000px] h-11 w-[135px] hidden min-[993px]:flex">Subscribe<i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+            <button class="transition-all duration-200 ease-in-out hover:shadow-[0px_3px_27px_0px_rgba(255,0,202,0.5)] bg-[linear-gradient(45deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] text-[white] items-center gap-1 pb-3 pt-3 pl-4 pr-4 text-[16px] font-semibold rounded-[1000px] h-11 w-[135px] hidden min-[993px]:flex">Subscribe<i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
             <img src="./assets/hamburger-menu.png" alt="" class="block min-[577px]:hidden w-[18px] h-3.5">
         </nav>
     </header>
     <main>
         <section class="relative flex flex-col justify-center items-center bg-[#1A0B2E]">
-            <picture class="w-full">
+            <picture class="w-full animate-wave">
                 <source srcset="./assets/bg-responsive.png" media="(max-width: 576px)">
                 <img src="./assets/hero-bg.png" class="w-full h-full object-cover" alt="hero background image">
             </picture>
@@ -66,7 +69,7 @@
             <div class="relative flex items-center justify-center">
                 <img src="./assets/hero-circle.png" alt="background circle"/>
                 <img src="./assets/microphone.png" alt="microphone" class="absolute max-h-[175px] max-w-[116px] w-[30%] h-auto animate-float"/>
-                <div src="./assets/new.png" alt="a new badge" class="absolute flex items-center justify-center max-h-[38px] max-w-[75px] bg-[#00FF88] border border-[#00FF88] rounded-[1000px] pt-2 pb-2 pr-4 pl-4 font-semibold text-[18px] font-[#1A0B2E] shadow-[0px_3px_27px_0px_rgba(0,255,136,0.5)] top-0 right-[5%] min-[993px]:right-[9%] min-[577px]:-right-[1%] min-[800px]:right-[7%] uppercase">New</div>
+                <div src="./assets/new.png" alt="a new badge" class="absolute flex items-center justify-center max-h-[38px] max-w-[75px] bg-[#00FF88] border border-[#00FF88] rounded-[1000px] pt-2 pb-2 pr-4 pl-4 font-semibold text-[18px] font-[#1A0B2E] shadow-[0px_3px_27px_0px_rgba(0,255,136,0.5)] top-0 right-[5%] min-[993px]:right-[11%] min-[577px]:-right-[1%] min-[800px]:right-[7%] uppercase">New</div>
             </div>
             <div class="flex flex-col gap-2 w-[400px] min-[577px]:w-auto mb-[101px]">
                 <h1 class="text-center text-[#FFFFFF] font-extrabold text-[40px] min-[577px]:text-[60px] leading-none">TechWave</h1>
@@ -77,7 +80,9 @@
                                 flex items-center gap-2 
                                 px-5 py-3 
                                 text-[16px] font-semibold
-                                rounded-[1000px] h-11 w-[201px]">
+                                rounded-[1000px] h-11 w-[201px]
+                                hover:shadow-[0px_3px_27px_0px_rgba(255,0,202,0.5)]
+                                transition-all duration-200 ease-in-out">
                     <img src="./assets/spotify.png" alt="Logo">
                     Listen on Spotify
                     </button>
@@ -87,7 +92,9 @@
                                 px-5 py-3 
                                 text-[16px] font-semibold 
                                 border border-solid border-[#00FF88]
-                                rounded-[1000px] h-11 w-[147px] text-[#00FF88]">
+                                rounded-[1000px] h-11 w-[147px] text-[#00FF88]
+                                hover:shadow-[0px_3px_27px_0px_rgba(0,255,136,0.5)]
+                                transition-all duration-200 ease-in-out">
                     <img src="./assets/message.png" alt="Logo">
                     Subscribe
                     </button>
