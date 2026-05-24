@@ -1,3 +1,4 @@
+<img width="1902" height="942" alt="Screenshot 2026-05-25 010928" src="https://github.com/user-attachments/assets/27de147a-cdec-4e62-a684-7f24992cd5b3" />
 # 📘 Tech Wave
 
 A web-based project built as part of Programming Hero Assignment 2.  
